@@ -1,0 +1,43 @@
+.footer {
+  background-color: var(--color-deep-indigo);
+  color: var(--color-white);
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.footerContent p {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.heart {
+  color: var(--color-vivid-orange);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footerNote {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footerContent p {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}

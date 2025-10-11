@@ -1,0 +1,126 @@
+.contact {
+  background-color: var(--color-gray-light);
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactInfo h3 {
+  color: var(--color-deep-indigo);
+  margin-bottom: var(--spacing-lg);
+}
+
+.contactInfo p {
+  color: var(--color-gray-medium);
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--color-deep-indigo);
+  font-size: var(--font-size-lg);
+  transition: color var(--transition-fast);
+}
+
+.contactItem:hover {
+  color: var(--color-vivid-orange);
+}
+
+.socialLinksContainer h4 {
+  color: var(--color-medium-purple);
+  margin-bottom: var(--spacing-md);
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--color-deep-indigo);
+  transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-vivid-orange);
+}
+
+.contactForm {
+  background-color: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-deep-indigo);
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-vivid-orange);
+}
+
+.contactForm .button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: 100%;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.formNote {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-medium);
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .contactForm {
+    padding: var(--spacing-lg);
+  }
+}

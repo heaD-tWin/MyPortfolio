@@ -1,0 +1,83 @@
+.skills {
+  background-color: var(--color-white);
+}
+
+.placeholder {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  background-color: var(--color-gray-light);
+  border-radius: var(--border-radius-lg);
+  border: 2px dashed var(--color-gray-medium);
+  margin: var(--spacing-2xl) 0;
+}
+
+.placeholder p {
+  color: var(--color-gray-medium);
+  font-style: italic;
+}
+
+.skillCategory {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.categoryTitle {
+  color: var(--color-medium-purple);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-gray-light);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+}
+
+.techItem:hover {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.techIcon {
+  font-size: 3rem;
+  color: var(--color-vivid-orange);
+  margin-bottom: var(--spacing-md);
+  transition: all var(--transition-medium);
+}
+
+.techItem:hover .techIcon {
+  color: var(--color-medium-purple);
+  transform: scale(1.1);
+}
+
+.techName {
+  font-weight: 500;
+  color: var(--color-deep-indigo);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .techGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .techItem {
+    padding: var(--spacing-md);
+  }
+
+  .techIcon {
+    font-size: 2.5rem;
+  }
+}
