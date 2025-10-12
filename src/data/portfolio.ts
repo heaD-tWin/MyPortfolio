@@ -18,7 +18,7 @@ export const projects: Project[] = [
       { name: 'Pydantic', icon: 'SiPydantic', category: 'framework' },
     ],
     githubUrl: 'https://github.com/heaD-tWin/fret-studio',
-    liveUrl: 'https://fret-studio-demo.com',
+    liveUrl: '',
     images: [
       '/programming-portfolio/images/projects/FretStudioScreen01.png',
       '/programming-portfolio/images/projects/FretStudioScreen02.png',
@@ -27,7 +27,26 @@ export const projects: Project[] = [
       '/programming-portfolio/images/projects/FretStudioScreen05.png',
     ],
     featured: true,
-  },
+    },
+    {
+        id: '2',
+        title: 'Weather View',
+        description: 'A sleek, interactive desktop weather dashboard built with Python, Tkinter, and the OpenWeatherMap API. Displays current weather, a 5-day forecast with icons, and dynamically changes background themes based on weather conditions. Includes geolocation, temperature charting, and favourite city support. Built as a personal portfolio project.',
+        technologies: [
+            { name: 'Python', icon: 'SiPython', category: 'language' },
+            { name: 'Tkinter', icon: 'SiPython', category: 'framework' },
+            { name: 'OpenWeatherMap API', icon: 'SiOpenweathermap', category: 'other' },
+            { name: 'Geopy', icon: 'SiPython', category: 'framework' },
+            { name: 'JSON', icon: 'SiJson', category: 'database' },
+        ],
+        githubUrl: 'https://github.com/heaD-tWin/WeatherView',
+        liveUrl: '', // Remove since it's a desktop app
+        images: [
+            '/programming-portfolio/images/projects/WVScreenshot1.png',
+            '/programming-portfolio/images/projects/WVScreenshot2.png',
+        ],
+        featured: true,
+    },
   // Add more projects here
 ];
 
@@ -52,6 +71,13 @@ export const technologies: Technology[] = [
   { name: 'Django', icon: 'SiDjango', category: 'framework' },
   { name: 'Node.js', icon: 'SiNodedotjs', category: 'framework' },
   { name: 'Pydantic', icon: 'SiPydantic', category: 'framework' },
+  
+  // Python GUI & Libraries
+  { name: 'Tkinter', icon: 'SiPython', category: 'framework' },
+  { name: 'Geopy', icon: 'SiPython', category: 'framework' },
+  
+  // APIs & External Services
+  { name: 'OpenWeatherMap API', icon: 'SiOpenweathermap', category: 'other' },
   
   // Tools & Version Control
   { name: 'Git', icon: 'SiGit', category: 'tool' },
@@ -97,6 +123,11 @@ export const skills: Skill[] = [
     name: 'Backend Development',
     level: 'Advanced',
     technologies: technologies.filter(t => ['Python', 'FastAPI', 'Django', 'Node.js', 'RESTful API', 'Pydantic'].includes(t.name)),
+  },
+  {
+    name: 'Desktop Applications',
+    level: 'Intermediate',
+    technologies: technologies.filter(t => ['Python', 'Tkinter', 'Geopy'].includes(t.name)),
   },
   {
     name: 'Testing & Quality Assurance',
