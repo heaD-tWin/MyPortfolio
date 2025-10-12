@@ -6,7 +6,8 @@ export interface Project {
   technologies: Technology[];
   githubUrl?: string;
   liveUrl?: string;
-  imageUrl?: string;
+  imageUrl?: string; // Keep for backward compatibility
+  images?: string[]; // New: Array of image URLs
   featured: boolean;
 }
 

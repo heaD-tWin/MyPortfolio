@@ -19,7 +19,13 @@ export const projects: Project[] = [
     ],
     githubUrl: 'https://github.com/heaD-tWin/fret-studio',
     liveUrl: 'https://fret-studio-demo.com',
-    imageUrl: '/programming-portfolio/images/projects/FretStudioScreen02.png', // Added base path
+    images: [
+      '/programming-portfolio/images/projects/FretStudioScreen01.png',
+      '/programming-portfolio/images/projects/FretStudioScreen02.png',
+      '/programming-portfolio/images/projects/FretStudioScreen03.png',
+      '/programming-portfolio/images/projects/FretStudioScreen04.png',
+      '/programming-portfolio/images/projects/FretStudioScreen05.png',
+    ],
     featured: true,
   },
   // Add more projects here
@@ -65,7 +71,6 @@ export const technologies: Technology[] = [
   { name: 'JSON', icon: 'SiJson', category: 'database' },
   
   // Cloud & Infrastructure
-  { name: 'AWS', icon: 'SiAmazonaws', category: 'other' },
   { name: 'Google Cloud', icon: 'SiGooglecloud', category: 'other' },
   { name: 'Azure AD', icon: 'SiMicrosoftazure', category: 'other' },
   { name: 'VMware', icon: 'SiVmware', category: 'other' },
@@ -130,7 +135,27 @@ export const courses: Course[] = [
     completionDate: '2019',
         description: 'This comprehensive course covered essential aspects of enterprise networking and IT systems. Key topics included configuring and troubleshooting WAN links, routers, and switches; designing and managing medium to complex ICT networks; installing and maintaining network servers and authentication processes; implementing enterprise virtual computing environments and server virtualization; and producing network architecture designs. The curriculum also emphasized workplace sustainability, ICT policies, security management, and aligning technology solutions with organizational strategy and industry standards.',
   },
-  // Add more courses here
+    {
+        id: '2',
+        title: 'Complete Python Mastery',
+        institution: 'Code with Mosh',
+        completionDate: '2025',
+        description: 'A project-based Python programming course designed to take learners from beginner to advanced levels. The curriculum covers Python fundamentals, automation, web development with Django, and machine learning, featuring hands-on projects in each area. By the end of the course, students gain practical experience and confidence using Python for backend development, data science, and automation.',
+    },
+    {
+        id: '3',
+        title: 'Data Analytics Professional Certificate',
+        institution: 'Google (Coursera)',
+        completionDate: '2025',
+        description: 'The Google Data Analytics Professional Certificate is an intensive program covering the fundamentals of data analytics. It teaches practical skills such as data cleaning, analysis, and visualization using tools like spreadsheets, SQL, and Tableau. The curriculum emphasizes real-world problem solving, preparing learners to collect, organize, and interpret data to drive informed business decisions.',
+    },
+    {
+        id: '4',
+        title: 'Java Programming and Software Engineering Fundamentals',
+        institution: 'Duke Duke University (Coursera)',
+        completionDate: '2025',
+        description: 'An in-depth program covering the essentials of Java programming and software engineering. The course focuses on core concepts such as problem-solving, object-oriented programming, algorithms, and data structures. Learners gain hands-on experience building robust applications and develop foundational skills in software development, testing, and project management.',
+    },
 ];
 
 // TODO: Add your actual contact information
