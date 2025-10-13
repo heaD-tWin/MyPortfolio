@@ -1,74 +1,77 @@
 .skills {
-  background-color: transparent; /* Remove white background since it's in Hero now */
-  padding: 0; /* Remove padding since it's embedded */
+  background-color: var(--color-deep-indigo);
+  color: var(--color-white);
+  padding: 0;
 }
 
 .placeholder {
   text-align: center;
   padding: var(--spacing-2xl);
-  background-color: var(--color-gray-light);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-lg);
-  border: 2px dashed var(--color-gray-medium);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
   margin: var(--spacing-lg) 0;
 }
 
 .placeholder p {
-  color: var(--color-gray-medium);
+  color: rgba(255, 255, 255, 0.7);
   font-style: italic;
 }
 
 .skillCategory {
-  margin-bottom: var(--spacing-lg); /* Further reduced for compact display */
+  margin-bottom: var(--spacing-lg);
 }
 
 .categoryTitle {
-  color: var(--color-medium-purple);
+  color: var(--color-white);
   text-align: center;
-  margin-bottom: var(--spacing-sm); /* Further reduced */
-  font-size: var(--font-size-base); /* Smaller for Hero section */
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  opacity: 0.9;
 }
 
 .techGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Smaller for Hero */
-  gap: var(--spacing-sm); /* Smaller gaps */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: var(--spacing-sm);
 }
 
 .techItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-sm); /* Smaller padding */
-  background-color: var(--color-gray-light);
-  border-radius: var(--border-radius-sm); /* Smaller radius */
+  padding: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-sm);
   transition: all var(--transition-medium);
   cursor: pointer;
 }
 
 .techItem:hover {
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
 .techIcon {
-  font-size: 1.5rem; /* Smaller icons for Hero */
-  color: var(--color-vivid-orange);
+  font-size: 1.5rem;
   margin-bottom: var(--spacing-xs);
   transition: all var(--transition-medium);
+  /* Removed color override to allow original logo colors */
 }
 
 .techItem:hover .techIcon {
-  color: var(--color-medium-purple);
   transform: scale(1.05);
+  /* Removed color change on hover to preserve original colors */
 }
 
 .techName {
   font-weight: 500;
-  color: var(--color-deep-indigo);
+  color: var(--color-white);
   text-align: center;
-  font-size: var(--font-size-xs); /* Smaller text for Hero */
+  font-size: var(--font-size-xs);
   line-height: 1.2;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -86,7 +89,7 @@
   }
   
   .techName {
-    font-size: 0.65rem; /* Very small on mobile */
+    font-size: 0.65rem;
   }
   
   .categoryTitle {

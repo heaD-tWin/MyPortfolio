@@ -1,9 +1,9 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--color-gray-light);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(65, 43, 107, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
   transition: all var(--transition-medium);
 }
@@ -17,7 +17,8 @@
 
 .logo h3 {
   margin: 0;
-  color: var(--color-deep-indigo);
+  color: var(--color-white);
+  opacity: 0.8;
   font-size: var(--font-size-xl);
 }
 
@@ -31,26 +32,27 @@
 .navLink {
   background: none;
   border: none;
-  color: var(--color-gray-dark);
+  color: var(--color-white);
   font-size: var(--font-size-base);
   font-weight: 500;
   cursor: pointer;
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--border-radius-sm);
   transition: all var(--transition-fast);
+  opacity: 0.9;
 }
 
-.navLink:hover {
-  color: var(--color-vivid-orange);
-  background-color: rgba(242, 89, 18, 0.1);
-}
+    .navLink:hover {
+        color: var(--color-white);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 
 .hamburger {
   display: none;
   background: none;
   border: none;
   font-size: var(--font-size-xl);
-  color: var(--color-deep-indigo);
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -64,10 +66,10 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--color-white);
+    background-color: var(--color-gray-light);
     flex-direction: column;
     padding: var(--spacing-lg);
-    border-top: 1px solid rgba(65, 43, 107, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;

@@ -1,16 +1,28 @@
 :root {
-  /* Color Palette from Design Doc */
+  /* Original Color Palette from Design Doc */
   --color-vivid-orange: #F25912;
   --color-medium-purple: #5C3E94;
   --color-deep-indigo: #412B6B;
   --color-accent: #412B6B;
   
-  /* Additional colors for UI */
-  --color-white: #ffffff;
+  /* Dark Theme Color System */
+  --color-primary-bg: #2A1B3D;      /* Very dark purple (darker than deep indigo) */
+  --color-secondary-bg: #362447;     /* Slightly lighter dark purple */
+  --color-card-bg: #3D2B52;         /* Card backgrounds (lighter than secondary) */
+  --color-elevated-bg: #4A3560;     /* Elevated elements (hover states) */
+  
+  /* Text Colors */
+  --color-text-primary: #F8F9FA;    /* Off-white for primary text */
+  --color-text-secondary: #E2E8F0;  /* Slightly darker for secondary text */
+  --color-text-muted: #94A3B8;      /* Muted text (replaces gray-medium) */
+  --color-text-inverse: #1A1A1A;    /* Dark text for light backgrounds */
+  
+  /* Legacy colors (keep for orange elements) */
+  --color-white: #F8F9FA;           /* Updated to off-white */
   --color-black: #000000;
-  --color-gray-light: #f5f5f5;
-  --color-gray-medium: #8a8a8a;
-  --color-gray-dark: #333333;
+  --color-gray-light: #4A3560;      /* Now a light purple for dark theme */
+  --color-gray-medium: #94A3B8;     /* Updated to lighter muted color */
+  --color-gray-dark: #F8F9FA;       /* Inverted for dark theme */
   
   /* Typography */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -38,10 +50,10 @@
   --border-radius-lg: 0.75rem;
   --border-radius-xl: 1rem;
   
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  /* Dark Theme Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   
   /* Transitions */
   --transition-fast: 0.15s ease-in-out;
