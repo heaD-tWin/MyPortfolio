@@ -2,6 +2,7 @@
   background-color: var(--color-gray-light);
 }
 
+
 .projectsGrid {
   display: grid;
   grid-template-columns: 1fr;

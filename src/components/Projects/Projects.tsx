@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className={`${styles.projects} section`}>
       <div className="container">
-        <h2 className="text-center mb-2xl">Featured Projects</h2>
+              <h2 className="text-center mb-2xl">Featured Projects</h2>
         <div className={styles.projectsGrid}>
           {featuredProjects.length > 0 ? (
             featuredProjects.map(project => (
