@@ -95,11 +95,17 @@
   color: var(--color-vivid-orange);
 }
 
+/* Apply base shadow to the LightCard wrapper */
+.contactContent .lightCard {
+  box-shadow: var(--shadow-md);
+}
+
 .contactForm {
   background-color: var(--color-white);
   padding: var(--spacing-2xl);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
+  /* box-shadow has been moved to the LightCard wrapper */
+  height: 100%;
 }
 
 .formGroup {

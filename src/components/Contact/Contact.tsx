@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaEnvelope } from 'react-icons/fa';
 import { contactInfo } from '../../data/portfolio';
+import LightCard from '../Interactive/LightCard';
 import MagneticButton from '../Interactive/MagneticButton';
 import MagneticDots from '../Interactive/MagneticDots';
 import styles from './Contact.module.css';
@@ -60,26 +61,28 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-          <form className={styles.contactForm}>
-            <div className={styles.formGroup}>
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows={5} required></textarea>
-            </div>
-            <MagneticButton className="button" type="submit">
-              Send Message
-            </MagneticButton>
-            <p className={styles.formNote}>
-              This form is for demonstration purposes. Please use the email above to contact me.
-            </p>
-          </form>
+          <LightCard>
+            <form className={styles.contactForm}>
+              <div className={styles.formGroup}>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows={5} required></textarea>
+              </div>
+              <MagneticButton className="button" type="submit">
+                Send Message
+              </MagneticButton>
+              <p className={styles.formNote}>
+                This form is for demonstration purposes. Please use the email above to contact me.
+              </p>
+            </form>
+          </LightCard>
         </div>
       </div>
     </section>
