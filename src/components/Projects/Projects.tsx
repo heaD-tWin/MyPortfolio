@@ -1,34 +1,45 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
+import React, { useState } from 'react';
 import { projects } from '../../data/portfolio';
+import MagneticDots from '../Interactive/MagneticDots';
+import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
 
 const Projects: React.FC = () => {
-  const featuredProjects = projects.filter(project => project.featured);
+  const [mousePos, setMousePos] = useState({ x: -1, y: -1 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: -1, y: -1 });
+  };
 
   return (
-    <section id="projects" className={`${styles.projects} section`}>
+    <section 
+      id="projects" 
+      className={`${styles.projects} section`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <MagneticDots 
+        dotSize={9}
+        spacing={100}
+        magnetStrength={40}
+        magnetRadius={200}
+        mousePos={mousePos}
+      />
       <div className="container">
-              <h2 className="text-center mb-2xl">Featured Projects</h2>
+        <h2 className="text-center mb-2xl">Featured Projects</h2>
         <div className={styles.projectsGrid}>
-          {featuredProjects.length > 0 ? (
-            featuredProjects.map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))
-          ) : (
-            <div className={styles.placeholder}>
-              <p>Projects will be displayed here once added to the data file.</p>
-              <p>TODO: Add your actual projects to src/data/portfolio.ts</p>
-            </div>
-          )}
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </div>
-        {projects.length > featuredProjects.length && (
-          <div className={styles.viewAllProjects}>
-            <button className="button button-secondary">
-              View All Projects
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );

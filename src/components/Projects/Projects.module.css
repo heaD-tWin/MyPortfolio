@@ -1,5 +1,8 @@
 .projects {
   background-color: var(--color-gray-light);
+  /* Added for MagneticDots positioning */
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -8,6 +11,9 @@
   grid-template-columns: 1fr;
   gap: var(--spacing-2xl);
   margin-bottom: var(--spacing-2xl);
+  /* Added to place content above dots */
+  position: relative;
+  z-index: 2;
 }
 
 .placeholder {
