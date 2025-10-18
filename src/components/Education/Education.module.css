@@ -1,8 +1,5 @@
 .education {
   background-color: var(--color-gray-light);
-  /* Added for MagneticDots positioning */
-  position: relative;
-  overflow: hidden;
 }
 
 .placeholder {
@@ -11,9 +8,6 @@
   background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
   border: 2px dashed var(--color-gray-medium);
-  /* Added to place content above dots */
-  position: relative;
-  z-index: 2;
 }
 
 .placeholder p {
@@ -25,9 +19,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-xl);
-  /* Added to place content above dots */
-  position: relative;
-  z-index: 2;
+}
+
+/* Apply hover effects to the LightCard wrapper */
+.coursesGrid .lightCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .courseCard {
@@ -36,11 +33,12 @@
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
+  height: 100%; /* Ensure card fills the LightCard wrapper */
 }
 
+/* Remove the direct hover effect from the card itself */
 .courseCard:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  /* transform and box-shadow are now handled by the LightCard */
 }
 
 .courseHeader {
