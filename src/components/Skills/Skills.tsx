@@ -47,6 +47,7 @@ const Skills: React.FC = () => {
       <MagneticDots 
         dotSize={9}
         spacing={100}
+        yOffset={15} // Add the 15px vertical offset here
         magnetStrength={40}
         magnetRadius={200}
         mousePos={mousePos}

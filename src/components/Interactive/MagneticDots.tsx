@@ -20,16 +20,18 @@ interface MousePos {
 interface MagneticDotsProps {
   dotSize?: number;
   spacing?: number;
-  magnetStrength?: number;
-  magnetRadius?: number;
+  yOffset?: number;
+  magnetStrength?: number; // Re-add prop
+  magnetRadius?: number;   // Re-add prop
   mousePos: MousePos;
 }
 
 const MagneticDots: React.FC<MagneticDotsProps> = ({
   dotSize = 6,
   spacing = 100,
-  magnetStrength = 30,
-  magnetRadius = 80,
+  yOffset = 0,
+  magnetStrength = 40, // Add default value
+  magnetRadius = 400,  // Add default value
   mousePos
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,7 +41,7 @@ const MagneticDots: React.FC<MagneticDotsProps> = ({
   const animationFrameRef = useRef<number>();
 
   const isHovering = mousePos.x !== -1 && mousePos.y !== -1;
-  const smoothing = 0.15; // Easing factor for smooth movement
+  const smoothing = 0.15;
 
   // Initialize dots grid
   useEffect(() => {
@@ -59,7 +61,7 @@ const MagneticDots: React.FC<MagneticDotsProps> = ({
         for (let col = 0; col < cols; col++) {
           const offsetX = row % 2 === 0 ? 0 : spacing / 2;
           const x = col * spacing + offsetX - spacing;
-          const y = row * spacing - spacing;
+          const y = row * spacing - spacing + yOffset;
 
           newDots.push({ id: id, originalX: x, originalY: y });
           newPositions.push({ x, y });
@@ -75,7 +77,7 @@ const MagneticDots: React.FC<MagneticDotsProps> = ({
     const observer = new ResizeObserver(updateDots);
     observer.observe(container);
     return () => observer.disconnect();
-  }, [spacing]);
+  }, [spacing, yOffset]);
 
   // High-performance animation loop
   useEffect(() => {
@@ -97,12 +99,12 @@ const MagneticDots: React.FC<MagneticDotsProps> = ({
 
           if (distance < magnetRadius) {
             const force = Math.pow(1 - (distance / magnetRadius), 2);
+            // Use props instead of hardcoded values
             targetX = dot.originalX + dx * force * (magnetStrength / magnetRadius);
             targetY = dot.originalY + dy * force * (magnetStrength / magnetRadius);
           }
         }
         
-        // Apply smoothing (lerp)
         pos.x += (targetX - pos.x) * smoothing;
         pos.y += (targetY - pos.y) * smoothing;
 
@@ -122,7 +124,7 @@ const MagneticDots: React.FC<MagneticDotsProps> = ({
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [dots, mousePos, isHovering, magnetRadius, magnetStrength, smoothing]);
+  }, [dots, mousePos, isHovering, smoothing, magnetRadius, magnetStrength]); // Add props to dependency array
 
   return (
     <div ref={containerRef} className={styles.container}>
