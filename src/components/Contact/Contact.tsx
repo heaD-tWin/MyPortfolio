@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
         mousePos={mousePos}
       />
       <div className="container">
-        <h2 className="sectionTitle text-center">Contact Me</h2>
+        <h2 className="text-center mb-2xl">Contact Me</h2>
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
             <h3 className={styles.connectText}>Let's Connect</h3>
