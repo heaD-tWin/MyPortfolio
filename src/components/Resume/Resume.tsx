@@ -33,7 +33,7 @@ const Resume: React.FC = () => {
               <FaDownload />
               Download Resume
             </button>
-            <button onClick={handleView} className="button button-secondary">
+            <button onClick={handleView} className="button">
               <FaEye />
               View Online
             </button>

@@ -27,23 +27,6 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.resumeActions .button {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-}
-
-.resumeActions .button.button-secondary {
-  background-color: transparent;
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-
-.resumeActions .button.button-secondary:hover {
-  background-color: var(--color-white);
-  color: var(--color-deep-indigo);
-}
-
 .resumeNote {
   font-size: var(--font-size-sm);
   opacity: 0.7;

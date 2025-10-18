@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
               <a href="#contact" className="button">
                 Get In Touch
               </a>
-              <a href="#projects" className="button button-secondary">
+              <a href="#projects" className="button">
                 View My Work
               </a>
             </div>

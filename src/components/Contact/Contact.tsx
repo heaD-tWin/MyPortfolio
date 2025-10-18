@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
         
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
-            <h3>Let's Connect</h3>
+            <h3 className={styles.connectText}>Let's Connect</h3>
             <p>
               I'm always interested in new opportunities and interesting projects. 
               Whether you have a question or just want to say hi, feel free to reach out!
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
               </a>
               
               <div className={styles.socialLinksContainer}>
-                <h4>Follow Me</h4>
+                <h4 className={styles.followText}>Follow Me</h4>
                 <div className={styles.socialLinks}>
                   {contactInfo.socialLinks.map((link, index) => (
                     <a 

@@ -2,17 +2,26 @@
   background-color: var(--color-gray-light);
 }
 
+.connectText {
+    color: var(--color-vivid-orange) !important;
+}
+
 .contactContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
-  max-width: 1000px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contactInfo h3 {
   color: var(--color-deep-indigo);
   margin-bottom: var(--spacing-lg);
+}
+
+/* Override the above rule when connectText class is present */
+.contactInfo h3.connectText {
+  color: var(--color-vivid-orange);
 }
 
 .contactInfo p {
@@ -32,7 +41,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  color: var(--color-deep-indigo);
+  color: var(--color-white);
   font-size: var(--font-size-lg);
   transition: color var(--transition-fast);
 }
@@ -46,6 +55,11 @@
   margin-bottom: var(--spacing-md);
 }
 
+/* Override the above rule when followText class is present */
+.socialLinksContainer h4.followText {
+  color: var(--color-vivid-orange);
+}
+
 .socialLinks {
   display: flex;
   flex-direction: column;
@@ -53,11 +67,11 @@
 }
 
 .socialLink {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  color: var(--color-deep-indigo);
-  transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--color-white);
+    transition: color var(--transition-fast);
 }
 
 .socialLink:hover {

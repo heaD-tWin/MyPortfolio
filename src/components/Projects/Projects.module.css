@@ -99,8 +99,8 @@
   align-items: center;
   gap: var(--spacing-xs);
   padding: var(--spacing-xs) var(--spacing-md);
-  background-color: var(--color-gray-light);
-  color: var(--color-deep-indigo);
+  background-color: var(--color-vivid-orange);
+  color: var(--color-white);
   border-radius: var(--border-radius-sm);
   font-size: var(--font-size-sm);
   font-weight: 500;
@@ -110,7 +110,6 @@
 
 .projectLink:hover {
   background-color: var(--color-vivid-orange);
-  color: var(--color-white);
 }
 
 /* Image Gallery Styles */

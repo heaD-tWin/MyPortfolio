@@ -80,9 +80,10 @@ a:hover {
 }
 
 .button:hover {
-  background-color: var(--color-medium-purple);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+    background-color: var(--color-vivid-orange);
+    color: var(--color-deep-indigo);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .button-secondary {
