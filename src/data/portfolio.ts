@@ -53,7 +53,7 @@ export const projects: Project[] = [
 // TODO: Add your actual technologies
 export const technologies: Technology[] = [
   // Programming Languages
-  { name: 'JavaScript', icon: 'SiJavascript', category: 'language' },
+  { name: 'JavaScript', icon: 'SiJavascript', category: 'language', iconPath: '/programming-portfolio/images/icons/JavaScript.png' },
   { name: 'TypeScript', icon: 'SiTypescript', category: 'language' },
   { name: 'HTML5', icon: 'SiHtml5', category: 'language' },
   { name: 'CSS3', icon: 'SiCss3', category: 'language' },

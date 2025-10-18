@@ -14,6 +14,7 @@ export interface Project {
 export interface Technology {
   name: string;
   icon: string; // Will be used with react-icons
+  iconPath?: string; // Optional path to image file
   category: 'language' | 'framework' | 'tool' | 'database' | 'other';
 }
 

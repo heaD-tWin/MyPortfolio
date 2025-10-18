@@ -33,6 +33,9 @@ const Skills: React.FC = () => {
   };
 
   const renderTechIcon = (tech: Technology) => {
+    if (tech.iconPath) {
+      return <img src={tech.iconPath} alt={tech.name} className={styles.techIconImage} />;
+    }
     const IconComponent = (Icons as any)[tech.icon];
     return IconComponent ? <IconComponent /> : <span>{tech.name[0]}</span>;
   };
