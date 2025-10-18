@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCertificate, FaCalendarAlt } from 'react-icons/fa';
 import { courses } from '../../data/portfolio';
+import MagneticDots from '../Interactive/MagneticDots';
 import styles from './Education.module.css';
 
 const Education: React.FC = () => {
+  const [mousePos, setMousePos] = useState({ x: -1, y: -1 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: -1, y: -1 });
+  };
+
   return (
-    <section id="education" className={`${styles.education} section`}>
+    <section 
+      id="education" 
+      className={`${styles.education} section`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <MagneticDots 
+        dotSize={9}
+        spacing={100}
+        magnetStrength={40}
+        magnetRadius={200}
+        mousePos={mousePos}
+      />
       <div className="container">
         <h2 className="text-center mb-2xl">Education & Certifications</h2>
         

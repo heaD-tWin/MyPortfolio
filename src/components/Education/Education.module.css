@@ -1,5 +1,8 @@
 .education {
   background-color: var(--color-gray-light);
+  /* Added for MagneticDots positioning */
+  position: relative;
+  overflow: hidden;
 }
 
 .placeholder {
@@ -8,6 +11,9 @@
   background-color: var(--color-white);
   border-radius: var(--border-radius-lg);
   border: 2px dashed var(--color-gray-medium);
+  /* Added to place content above dots */
+  position: relative;
+  z-index: 2;
 }
 
 .placeholder p {
@@ -19,6 +25,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-xl);
+  /* Added to place content above dots */
+  position: relative;
+  z-index: 2;
 }
 
 .courseCard {
