@@ -36,7 +36,6 @@
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
-  overflow: hidden;
 }
 
 /* New Side-by-Side Layout */
