@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Icons from 'react-icons/si';
 import { technologies } from '../../data/portfolio';
 import { Technology } from '../../types';
+import MagneticDots from '../Interactive/MagneticDots';
 import styles from './Skills.module.css';
 
 const Skills: React.FC = () => {
+  const [mousePos, setMousePos] = useState({ x: -1, y: -1 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: -1, y: -1 });
+  };
+
   const categories = {
     language: 'Programming Languages',
     framework: 'Frameworks & Libraries',
@@ -23,7 +38,19 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className={`${styles.skills} section`}>
+    <section 
+      id="skills" 
+      className={`${styles.skills} section`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <MagneticDots 
+        dotSize={9}
+        spacing={100}
+        magnetStrength={40}
+        magnetRadius={200}
+        mousePos={mousePos}
+      />
       <div className="container">
         <h2 className="text-center mb-2xl">Skills & Technologies</h2>
         
