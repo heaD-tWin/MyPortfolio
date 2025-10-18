@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { bio, contactInfo } from '../../data/portfolio';
-import LightCard from '../Interactive/LightCard';
+// LightCard import is removed as it's no longer used in this file.
 import MagneticButton from '../Interactive/MagneticButton';
 import MagneticDots from '../Interactive/MagneticDots';
 import styles from './Hero.module.css';
@@ -41,52 +41,53 @@ const Hero: React.FC = () => {
       <MagneticDots 
         dotSize={9}
         spacing={100}
-        yOffset={15} // Add the 15px vertical offset here
+        yOffset={15}
+        magnetStrength={40}
+        magnetRadius={400}
         mousePos={mousePos}
       />
       <div className="container">
         <div className={styles.heroContent}>
-          <LightCard>
-            <div className={styles.heroTextContainer}>
-              <h1 className={styles.heroTitle}>
-                Hi, I'm <span className={styles.highlight}>{bio.name}</span>
-              </h1>
-              <h2 className={styles.heroSubtitle}>{bio.title}</h2>
-              <div className={styles.heroDescription}>
-                {bioParagraphs.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
-              <div className={styles.heroActions}>
-                <MagneticButton 
-                  className="button"
-                  onClick={() => scrollToSection('contact')}
-                >
-                  Get In Touch
-                </MagneticButton>
-                <MagneticButton 
-                  className="button"
-                  onClick={() => scrollToSection('projects')}
-                >
-                  View My Work
-                </MagneticButton>
-              </div>
-              <div className={styles.socialLinks}>
-                {contactInfo.socialLinks.map((link, index) => (
-                  <a 
-                    key={index}
-                    href={link.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    title={link.name}
-                  >
-                    {link.name === 'GitHub' && <FaGithub />}
-                    {link.name === 'LinkedIn' && <FaLinkedin />}
-                  </a>
-                ))}
-              </div>
+          {/* The LightCard wrapper has been removed from here */}
+          <div className={styles.heroTextContainer}>
+            <h1 className={styles.heroTitle}>
+              Hi, I'm <span className={styles.highlight}>{bio.name}</span>
+            </h1>
+            <h2 className={styles.heroSubtitle}>{bio.title}</h2>
+            <div className={styles.heroDescription}>
+              {bioParagraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
-          </LightCard>
+            <div className={styles.heroActions}>
+              <MagneticButton 
+                className="button"
+                onClick={() => scrollToSection('contact')}
+              >
+                Get In Touch
+              </MagneticButton>
+              <MagneticButton 
+                className="button"
+                onClick={() => scrollToSection('projects')}
+              >
+                View My Work
+              </MagneticButton>
+            </div>
+            <div className={styles.socialLinks}>
+              {contactInfo.socialLinks.map((link, index) => (
+                <a 
+                  key={index}
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title={link.name}
+                >
+                  {link.name === 'GitHub' && <FaGithub />}
+                  {link.name === 'LinkedIn' && <FaLinkedin />}
+                </a>
+              ))}
+            </div>
+          </div>
           <div className={styles.heroImage}>
             {bio.avatarUrl ? (
               <div className={styles.avatarContainer}>
