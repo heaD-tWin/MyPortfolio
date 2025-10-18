@@ -1,11 +1,19 @@
 import React from 'react';
 import { FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { bio, contactInfo } from '../../data/portfolio';
+import MagneticButton from '../Interactive/MagneticButton';
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
   // Split bio description into paragraphs
   const bioParagraphs = bio.description.split('\n\n').filter(p => p.trim());
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section id="about" className={`${styles.hero} section`}>
@@ -22,12 +30,18 @@ const Hero: React.FC = () => {
               ))}
             </div>
             <div className={styles.heroActions}>
-              <a href="#contact" className="button">
+              <MagneticButton 
+                className="button"
+                onClick={() => scrollToSection('contact')}
+              >
                 Get In Touch
-              </a>
-              <a href="#projects" className="button">
+              </MagneticButton>
+              <MagneticButton 
+                className="button"
+                onClick={() => scrollToSection('projects')}
+              >
                 View My Work
-              </a>
+              </MagneticButton>
             </div>
             <div className={styles.socialLinks}>
               {contactInfo.socialLinks.map((link, index) => (
