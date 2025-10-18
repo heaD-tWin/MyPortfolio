@@ -1,10 +1,13 @@
-import React from 'react';
-import { FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { bio, contactInfo } from '../../data/portfolio';
 import MagneticButton from '../Interactive/MagneticButton';
+import MagneticDots from '../Interactive/MagneticDots';
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => {
+  const [mousePos, setMousePos] = useState({ x: -1, y: -1 });
+
   // Split bio description into paragraphs
   const bioParagraphs = bio.description.split('\n\n').filter(p => p.trim());
 
@@ -15,8 +18,32 @@ const Hero: React.FC = () => {
     }
   };
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setMousePos({ x: -1, y: -1 });
+  };
+
   return (
-    <section id="about" className={`${styles.hero} section`}>
+    <section 
+      id="about" 
+      className={`${styles.hero} section`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <MagneticDots 
+        dotSize={9}
+        spacing={100}
+        magnetStrength={40}
+        magnetRadius={400}
+        mousePos={mousePos}
+      />
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
