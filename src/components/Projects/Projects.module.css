@@ -39,11 +39,6 @@
   overflow: hidden;
 }
 
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
 /* New Side-by-Side Layout */
 .projectLayout {
   display: grid;

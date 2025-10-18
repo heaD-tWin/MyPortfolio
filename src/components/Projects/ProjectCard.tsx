@@ -1,56 +1,53 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { Project } from '../../types';
 import ImageGallery from './ImageGallery';
-import LightCard from '../Interactive/LightCard';
-import MagneticButton from '../Interactive/MagneticButton';
 import styles from './Projects.module.css';
 
 interface ProjectCardProps {
   project: Project;
+  className?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const projectImages = project.images || (project.imageUrl ? [project.imageUrl] : []);
-
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, className }) => {
   return (
-    <LightCard className={styles.projectCard}>
+    <div className={`${styles.projectCard} ${className || ''}`}>
       <div className={styles.projectLayout}>
         <div className={styles.projectContent}>
-          <h3 className={styles.projectTitle}>{project.title}</h3>
-          <p className={styles.projectDescription}>{project.description}</p>
-          <div className={styles.techStack}>
-            {project.technologies.map((tech, index) => (
-              <span key={index} className={styles.techTag}>
-                {tech.name}
-              </span>
-            ))}
+          <div>
+            <h3 className={styles.projectTitle}>{project.title}</h3>
+            <p className={styles.projectDescription}>{project.description}</p>
           </div>
-          <div className={styles.projectLinks}>
-            {project.githubUrl && (
-              <MagneticButton 
-                className="button button-secondary"
-                onClick={() => window.open(project.githubUrl, '_blank')}
-              >
-                <FaGithub /> Code
-              </MagneticButton>
-            )}
-            {project.liveUrl && (
-              <MagneticButton 
-                className="button"
-                onClick={() => window.open(project.liveUrl, '_blank')}
-              >
-                <FaExternalLinkAlt /> Live Demo
-              </MagneticButton>
-            )}
+          <div>
+            <div className={styles.techStack}>
+              {project.technologies.map((tech, index) => (
+                <span key={index} className={styles.techTag}>{tech.name}</span>
+              ))}
+            </div>
+            <div className={styles.projectLinks}>
+              {project.githubUrl && (
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                  GitHub
+                </a>
+              )}
+              {project.liveUrl && (
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                  Live Demo
+                </a>
+              )}
+            </div>
           </div>
         </div>
-        
         <div className={styles.projectImageSection}>
-          <ImageGallery images={projectImages} title={project.title} />
+          {project.images && project.images.length > 0 ? (
+            <ImageGallery images={project.images} title={project.title} />
+          ) : (
+            <div className={styles.imagePlaceholder}>
+              <span>Project Image</span>
+            </div>
+          )}
         </div>
       </div>
-    </LightCard>
+    </div>
   );
 };
 

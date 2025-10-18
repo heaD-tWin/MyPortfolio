@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { projects } from '../../data/portfolio';
+import LightCard from '../Interactive/LightCard';
 import MagneticDots from '../Interactive/MagneticDots';
 import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
@@ -37,7 +38,9 @@ const Projects: React.FC = () => {
         <h2 className="text-center mb-2xl">Featured Projects</h2>
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <LightCard key={index}>
+              <ProjectCard project={project} />
+            </LightCard>
           ))}
         </div>
       </div>
