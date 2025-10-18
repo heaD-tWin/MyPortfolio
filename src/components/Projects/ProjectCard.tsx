@@ -2,6 +2,8 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { Project } from '../../types';
 import ImageGallery from './ImageGallery';
+import LightCard from '../Interactive/LightCard';
+import MagneticButton from '../Interactive/MagneticButton';
 import styles from './Projects.module.css';
 
 interface ProjectCardProps {
@@ -9,11 +11,10 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  // Use images array if available, otherwise fall back to single imageUrl
   const projectImages = project.images || (project.imageUrl ? [project.imageUrl] : []);
 
   return (
-    <div className={styles.projectCard}>
+    <LightCard className={styles.projectCard}>
       <div className={styles.projectLayout}>
         <div className={styles.projectContent}>
           <h3 className={styles.projectTitle}>{project.title}</h3>
@@ -27,24 +28,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
           <div className={styles.projectLinks}>
             {project.githubUrl && (
-              <a 
-                href={project.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.projectLink}
+              <MagneticButton 
+                className="button button-secondary"
+                onClick={() => window.open(project.githubUrl, '_blank')}
               >
                 <FaGithub /> Code
-              </a>
+              </MagneticButton>
             )}
             {project.liveUrl && (
-              <a 
-                href={project.liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.projectLink}
+              <MagneticButton 
+                className="button"
+                onClick={() => window.open(project.liveUrl, '_blank')}
               >
                 <FaExternalLinkAlt /> Live Demo
-              </a>
+              </MagneticButton>
             )}
           </div>
         </div>
@@ -53,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <ImageGallery images={projectImages} title={project.title} />
         </div>
       </div>
-    </div>
+    </LightCard>
   );
 };
 

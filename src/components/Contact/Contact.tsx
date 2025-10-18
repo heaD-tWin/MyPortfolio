@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import { contactInfo } from '../../data/portfolio';
+import MagneticButton from '../Interactive/MagneticButton';
 import styles from './Contact.module.css';
 
 const Contact: React.FC = () => {
@@ -115,10 +116,10 @@ const Contact: React.FC = () => {
                 />
               </div>
               
-              <button type="submit" className="button">
+              <MagneticButton type="submit" className="button">
                 <FaPaperPlane />
                 Send Message
-              </button>
+              </MagneticButton>
             </form>
             
             <p className={styles.formNote}>

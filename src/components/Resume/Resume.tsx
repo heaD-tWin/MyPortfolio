@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaDownload, FaEye } from 'react-icons/fa';
+import MagneticButton from '../Interactive/MagneticButton';
 import styles from './Resume.module.css';
 
 const Resume: React.FC = () => {
@@ -29,14 +30,14 @@ const Resume: React.FC = () => {
             Download or view my complete resume to learn more about my experience and qualifications.
           </p>
           <div className={styles.resumeActions}>
-            <button onClick={handleDownload} className="button">
+            <MagneticButton onClick={handleDownload} className="button">
               <FaDownload />
               Download Resume
-            </button>
-            <button onClick={handleView} className="button">
+            </MagneticButton>
+            <MagneticButton onClick={handleView} className="button">
               <FaEye />
               View Online
-            </button>
+            </MagneticButton>
           </div>
           <p className={styles.resumeNote}>
             {/* TODO: Add your actual resume file to the public folder and update the paths above */}
