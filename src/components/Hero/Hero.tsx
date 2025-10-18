@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
       />
       <div className="container">
         <div className={styles.heroContent}>
-          <div className={styles.heroText}>
+          <div className={styles.heroTextContainer}>
             <h1 className={styles.heroTitle}>
               Hi, I'm <span className={styles.highlight}>{bio.name}</span>
             </h1>
