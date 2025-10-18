@@ -3,8 +3,9 @@
   /* Added for MagneticDots positioning */
   position: relative;
   overflow: hidden;
+  padding: var(--spacing-4xl) 0;
+  margin-bottom: -20px; /* Added to hide clipped dots at the bottom */
 }
-
 
 .projectsGrid {
   display: grid;
