@@ -1,5 +1,21 @@
 .hero {
-  background: linear-gradient(135deg, var(--color-deep-indigo), var(--color-medium-purple));
+  background: 
+    /* Subtle hexagonal dot pattern */
+    radial-gradient(circle at 25% 25%, transparent 2px, var(--color-pattern-purple) 2px, var(--color-pattern-purple) 3px, transparent 3px),
+    radial-gradient(circle at 75% 75%, transparent 2px, var(--color-pattern-purple) 2px, var(--color-pattern-purple) 3px, transparent 3px),
+    /* Your original gradient underneath */
+    linear-gradient(135deg, var(--color-deep-indigo), var(--color-medium-purple));
+  
+  background-size: 
+    100px 100px,
+    100px 100px,
+    100% 100%;
+  
+  background-position: 
+    0 0,
+    50px 50px,
+    0 0;
+  
   color: var(--color-white);
   min-height: 80vh;
   display: flex;
@@ -104,6 +120,14 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    /* Simpler pattern on mobile */
+    background-size: 
+      80px 80px,
+      80px 80px,
+      100% 100%;
+  }
+
   .heroContent {
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);

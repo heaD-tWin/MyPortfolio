@@ -5,6 +5,9 @@
   --color-deep-indigo: #412B6B;
   --color-accent: #412B6B;
   
+  /* New darker pattern color */
+  --color-pattern-purple: #2D1A4A;  /* Darker purple for hex pattern */
+  
   /* Dark Theme Color System */
   --color-primary-bg: #2A1B3D;      /* Very dark purple (darker than deep indigo) */
   --color-secondary-bg: #362447;     /* Slightly lighter dark purple */
@@ -55,8 +58,13 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   
-  /* Transitions */
-  --transition-fast: 0.15s ease-in-out;
-  --transition-medium: 0.3s ease-in-out;
-  --transition-slow: 0.5s ease-in-out;
+  /* Enhanced transitions for interactive effects */
+  --transition-fast: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-medium: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Interactive effect variables */
+  --magnetic-strength: 0.15;
+  --parallax-speed: 0.3;
+  --light-source-intensity: 0.2;
 }
