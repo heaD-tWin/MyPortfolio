@@ -3,29 +3,32 @@ import { useLightSource } from '../../hooks/useLightSource';
 import styles from './Interactive.module.css';
 
 interface LightCardProps {
-  // The child must be a single React element that can accept a className
   children: React.ReactElement<{ className?: string }>;
+  className?: string; // Allow passing a className to the LightCard itself
 }
 
-const LightCard: React.FC<LightCardProps> = ({ children }) => {
-  const { onMouseMove, onMouseLeave } = useLightSource({
-    intensity: 0.25,
-    radius: 250
-  });
+const LightCard: React.FC<LightCardProps> = ({ children, className }) => {
+  // Call the hook with ZERO arguments to get the event handlers.
+  const { onMouseMove, onMouseLeave } = useLightSource();
 
-  // Clone the child (e.g., ProjectCard) and add the content class to it directly
+  // Ensure we have a valid React element to clone.
+  if (!React.isValidElement(children)) {
+    return null;
+  }
+
+  // Clone the child to apply the content masking class.
   const childWithClass = React.cloneElement(children, {
     className: `${children.props.className || ''} ${styles.lightCardContent}`
   });
 
   return (
     <div
-      className={styles.lightCard}
+      // Apply the event handlers and any passed className here.
+      className={`${styles.lightCard} ${className || ''}`}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.lightEffect} data-light-effect="true" />
-      {/* Render the modified child directly, without a wrapper div */}
       {childWithClass}
     </div>
   );
