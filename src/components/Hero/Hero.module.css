@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(135deg, var(--color-deep-indigo), var(--color-medium-purple));
+  background:var(--color-deep-indigo);
   color: var(--color-white);
   min-height: 80vh;
   display: flex;
