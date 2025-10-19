@@ -55,7 +55,7 @@ export const technologies: Technology[] = [
   // Programming Languages
   { name: 'JavaScript', icon: 'SiJavascript', category: 'language', iconPath: '/programming-portfolio/images/icons/JavaScript.png' },
   { name: 'TypeScript', icon: 'SiTypescript', category: 'language', iconPath: '/programming-portfolio/images/icons/TypeScript.png' },
-  { name: 'HTML5', icon: 'SiHtml5', category: 'language', iconPath: '/programming-portfolio/images/icons/HTML5.png' },
+    { name: 'HTML5', icon: 'SiHtml5', category: 'language', iconPath: '/programming-portfolio/images/icons/HTML5.png' },
     { name: 'CSS3', icon: 'SiCss3', category: 'language', iconPath: '/programming-portfolio/images/icons/CSS3.png' },
     { name: 'Python', icon: 'SiPython', category: 'language', iconPath: '/programming-portfolio/images/icons/Python.png' },
     { name: 'Java', icon: 'SiJava', category: 'language', iconPath: '/programming-portfolio/images/icons/Java.png' },
