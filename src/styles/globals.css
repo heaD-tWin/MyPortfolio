@@ -111,6 +111,26 @@ a:hover {
 }
 
 .mb-2xl {
-    color: var(--color-vivid-orange);
-    margin-bottom: var(--spacing-2xl);
+  color: var(--color-vivid-orange); /* Fallback color for browsers that don't support gradient text */
+  background: linear-gradient(135deg, var(--color-vivid-orange) 0%, var(--color-medium-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700; /* Make the text bolder for better visibility */
+}
+
+.mb-2xl::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-vivid-orange), var(--color-medium-purple));
+  border-radius: 2px;
 }

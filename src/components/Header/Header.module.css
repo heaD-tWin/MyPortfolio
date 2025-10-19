@@ -17,9 +17,28 @@
 
 .logo h3 {
   margin: 0;
-  color: var(--color-white);
-  opacity: 0.8;
+  color: var(--color-vivid-orange); /* Fallback color */
+  background: linear-gradient(135deg, var(--color-vivid-orange) 0%, var(--color-medium-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: var(--font-size-xl);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.logo h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-vivid-orange), var(--color-medium-purple));
+  border-radius: 2px;
 }
 
 .navMenu {
