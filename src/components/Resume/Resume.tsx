@@ -25,7 +25,7 @@ const Resume: React.FC = () => {
     <section className={`${styles.resume} section`}>
       <div className="container">
         <div className={styles.resumeContent}>
-          <h2 className={styles.resumeTitle}>Resume</h2>
+          <h2 className="text-center mb-2xl">Resume</h2>
           <p className={styles.resumeDescription}>
             Download or view my complete resume to learn more about my experience and qualifications.
           </p>

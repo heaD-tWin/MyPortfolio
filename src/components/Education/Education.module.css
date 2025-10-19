@@ -1,8 +1,8 @@
 .education {
-  background-color: var(--color-gray-light);
-  /* Added for MagneticDots positioning */
-  position: relative;
-  overflow: hidden;
+    background-color: var(--color-deep-indigo-leg);
+    /* Added for MagneticDots positioning */
+    position: relative;
+    overflow: hidden;
 }
 
 .placeholder {

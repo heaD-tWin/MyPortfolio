@@ -1,10 +1,10 @@
 .projects {
-  background-color: var(--color-gray-light);
-  /* Added for MagneticDots positioning */
-  position: relative;
-  overflow: hidden;
-  padding: var(--spacing-4xl) 0;
-  margin-bottom: -20px; /* Added to hide clipped dots at the bottom */
+    background-color: var(--color-deep-indigo-leg);
+    /* Added for MagneticDots positioning */
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-4xl) 0;
+    margin-bottom: -20px; /* Added to hide clipped dots at the bottom */
 }
 
 .projectsGrid {
