@@ -1,9 +1,9 @@
 .header {
     position: sticky;
     top: 0;
-    background-color: var(--color-deep-indigo-leg);
+    background: linear-gradient(135deg, var(--color-deep-indigo), var(--color-medium-purple));
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(0, 0, 0);
     z-index: 1000;
     transition: all var(--transition-medium);
 }
@@ -64,7 +64,7 @@
 
     .navLink:hover {
         color: var(--color-vivid-orange);
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--color-deep-indigo);
     }
 
 .hamburger {
