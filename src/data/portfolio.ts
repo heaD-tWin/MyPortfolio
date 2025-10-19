@@ -54,56 +54,46 @@ export const projects: Project[] = [
 export const technologies: Technology[] = [
   // Programming Languages
   { name: 'JavaScript', icon: 'SiJavascript', category: 'language', iconPath: '/programming-portfolio/images/icons/JavaScript.png' },
-  { name: 'TypeScript', icon: 'SiTypescript', category: 'language' },
-  { name: 'HTML5', icon: 'SiHtml5', category: 'language' },
-  { name: 'CSS3', icon: 'SiCss3', category: 'language' },
-    { name: 'Python', icon: 'SiPython', category: 'language' },
-    { name: 'Java', icon: 'SiJava', category: 'language' },
-  { name: 'SQL', icon: 'SiMysql', category: 'language' },
+  { name: 'TypeScript', icon: 'SiTypescript', category: 'language', iconPath: '/programming-portfolio/images/icons/TypeScript.png' },
+  { name: 'HTML5', icon: 'SiHtml5', category: 'language', iconPath: '/programming-portfolio/images/icons/HTML5.png' },
+    { name: 'CSS3', icon: 'SiCss3', category: 'language', iconPath: '/programming-portfolio/images/icons/CSS3.png' },
+    { name: 'Python', icon: 'SiPython', category: 'language', iconPath: '/programming-portfolio/images/icons/Python.png' },
+    { name: 'Java', icon: 'SiJava', category: 'language', iconPath: '/programming-portfolio/images/icons/Java.png' },
+    { name: 'SQL', icon: 'SiMysql', category: 'language', iconPath: '/programming-portfolio/images/icons/MySQL.png' },
   
   // Frontend Frameworks & Libraries
-  { name: 'React', icon: 'SiReact', category: 'framework' },
+    { name: 'React', icon: 'SiReact', category: 'framework', iconPath: '/programming-portfolio/images/icons/React.png' },
   { name: 'React Router', icon: 'SiReactrouter', category: 'framework' },
-  { name: 'Vite', icon: 'SiVite', category: 'framework' },
+    { name: 'Vite', icon: 'SiVite', category: 'framework', iconPath: '/programming-portfolio/images/icons/Vite.png' },
   
   // Backend Frameworks
   { name: 'FastAPI', icon: 'SiFastapi', category: 'framework' },
   { name: 'Django', icon: 'SiDjango', category: 'framework' },
-  { name: 'Node.js', icon: 'SiNodedotjs', category: 'framework' },
-  { name: 'Pydantic', icon: 'SiPydantic', category: 'framework' },
-  
-  // Python GUI & Libraries
-  { name: 'Tkinter', icon: 'SiPython', category: 'framework' },
-  { name: 'Geopy', icon: 'SiPython', category: 'framework' },
-  
-  // APIs & External Services
-  { name: 'OpenWeatherMap API', icon: 'SiOpenweathermap', category: 'other' },
+    { name: 'Node.js', icon: 'SiNodedotjs', category: 'framework', iconPath: '/programming-portfolio/images/icons/NodeJS.png' },
+    { name: 'Pydantic', icon: 'SiPydantic', category: 'framework', iconPath: '/programming-portfolio/images/icons/Pydantic.png' },
   
   // Tools & Version Control
   { name: 'Git', icon: 'SiGit', category: 'tool' },
-  { name: 'VS Code', icon: 'SiVisualstudiocode', category: 'tool' },
-  { name: 'GitHub', icon: 'SiGithub', category: 'tool' },
-  { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tool' },
-  { name: 'Uvicorn', icon: 'SiUvicorn', category: 'tool' },
-  { name: 'Vitest', icon: 'SiVitest', category: 'tool' },
+    { name: 'GitHub', icon: 'SiGithub', category: 'tool', iconPath: '/programming-portfolio/images/icons/GitHub.png' },
+    { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tool', iconPath: '/programming-portfolio/images/icons/BitBucket.png' },
+    { name: 'Uvicorn', icon: 'SiUvicorn', category: 'tool', iconPath: '/programming-portfolio/images/icons/Uvicorn.png' },
+    { name: 'Vitest', icon: 'SiVitest', category: 'tool', iconPath: '/programming-portfolio/images/icons/Vitest.png' },
   
   // Testing
-  { name: 'React Testing Library', icon: 'SiTestinglibrary', category: 'tool' },
+    { name: 'React Testing Library', icon: 'SiTestinglibrary', category: 'tool', iconPath: '/programming-portfolio/images/icons/ReactTestingLibrary.png' },
   
   // Database
-  { name: 'MySQL', icon: 'SiMysql', category: 'database' },
+    { name: 'MySQL', icon: 'SiMysql', category: 'database', iconPath: '/programming-portfolio/images/icons/ReactTestingLibrary.png' },
   { name: 'PostgreSQL', icon: 'SiPostgresql', category: 'database' },
-  { name: 'SQLite', icon: 'SiSqlite', category: 'database' },
-  { name: 'JSON', icon: 'SiJson', category: 'database' },
+    { name: 'SQLite', icon: 'SiSqlite', category: 'database', iconPath: '/programming-portfolio/images/icons/SQLite.png' },
+    { name: 'JSON', icon: 'SiJson', category: 'database', iconPath: '/programming-portfolio/images/icons/JSON.png' },
   
   // Cloud & Infrastructure
-  { name: 'Google Cloud', icon: 'SiGooglecloud', category: 'other' },
-  { name: 'Azure AD', icon: 'SiMicrosoftazure', category: 'other' },
-  { name: 'VMware', icon: 'SiVmware', category: 'other' },
+    { name: 'Google Cloud', icon: 'SiGooglecloud', category: 'other', iconPath: '/programming-portfolio/images/icons/GoogleCloud.png' },
+    { name: 'Azure AD', icon: 'SiMicrosoftazure', category: 'other', iconPath: '/programming-portfolio/images/icons/AzureAD.png' },
+    { name: 'VMware', icon: 'SiVmware', category: 'other', iconPath: '/programming-portfolio/images/icons/Vmware.png' },
   
   // Enterprise & Networking
-  { name: 'Active Directory', icon: 'SiMicrosoft', category: 'other' },
-  { name: 'Office 365', icon: 'SiMicrosoft365', category: 'other' },
   { name: 'Cisco IOS', icon: 'SiCisco', category: 'other' },
   { name: 'RESTful API', icon: 'SiPostman', category: 'other' },
   { name: 'VOIP', icon: 'SiWebrtc', category: 'other' },
