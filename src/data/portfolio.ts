@@ -59,32 +59,30 @@ export const technologies: Technology[] = [
     { name: 'CSS3', icon: 'SiCss3', category: 'language', iconPath: '/programming-portfolio/images/icons/CSS3.png' },
     { name: 'Python', icon: 'SiPython', category: 'language', iconPath: '/programming-portfolio/images/icons/Python.png' },
     { name: 'Java', icon: 'SiJava', category: 'language', iconPath: '/programming-portfolio/images/icons/Java.png' },
-    { name: 'SQL', icon: 'SiMysql', category: 'language', iconPath: '/programming-portfolio/images/icons/MySQL.png' },
   
   // Frontend Frameworks & Libraries
     { name: 'React', icon: 'SiReact', category: 'framework', iconPath: '/programming-portfolio/images/icons/React.png' },
-  { name: 'React Router', icon: 'SiReactrouter', category: 'framework' },
+    { name: 'React Router', icon: 'SiReactrouter', category: 'framework', iconPath: '/programming-portfolio/images/icons/ReactRouter.png' },
     { name: 'Vite', icon: 'SiVite', category: 'framework', iconPath: '/programming-portfolio/images/icons/Vite.png' },
   
   // Backend Frameworks
-  { name: 'FastAPI', icon: 'SiFastapi', category: 'framework' },
-  { name: 'Django', icon: 'SiDjango', category: 'framework' },
+    { name: 'FastAPI', icon: 'SiFastapi', category: 'framework', iconPath: '/programming-portfolio/images/icons/FastAPI.png' },
+    { name: 'Django', icon: 'SiDjango', category: 'framework', iconPath: '/programming-portfolio/images/icons/Django.png' },
     { name: 'Node.js', icon: 'SiNodedotjs', category: 'framework', iconPath: '/programming-portfolio/images/icons/NodeJS.png' },
     { name: 'Pydantic', icon: 'SiPydantic', category: 'framework', iconPath: '/programming-portfolio/images/icons/Pydantic.png' },
   
   // Tools & Version Control
-  { name: 'Git', icon: 'SiGit', category: 'tool' },
+    { name: 'Git', icon: 'SiGit', category: 'tool', iconPath: '/programming-portfolio/images/icons/Git.png' },
     { name: 'GitHub', icon: 'SiGithub', category: 'tool', iconPath: '/programming-portfolio/images/icons/GitHub.png' },
     { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tool', iconPath: '/programming-portfolio/images/icons/BitBucket.png' },
     { name: 'Uvicorn', icon: 'SiUvicorn', category: 'tool', iconPath: '/programming-portfolio/images/icons/Uvicorn.png' },
-    { name: 'Vitest', icon: 'SiVitest', category: 'tool', iconPath: '/programming-portfolio/images/icons/Vitest.png' },
+    { name: 'Vitest', icon: 'SiVitest', category: 'tool', iconPath: '/programming-portfolio/images/icons/Vite.png' },
   
   // Testing
     { name: 'React Testing Library', icon: 'SiTestinglibrary', category: 'tool', iconPath: '/programming-portfolio/images/icons/ReactTestingLibrary.png' },
   
   // Database
-    { name: 'MySQL', icon: 'SiMysql', category: 'database', iconPath: '/programming-portfolio/images/icons/ReactTestingLibrary.png' },
-  { name: 'PostgreSQL', icon: 'SiPostgresql', category: 'database' },
+    { name: 'MySQL', icon: 'SiMysql', category: 'database', iconPath: '/programming-portfolio/images/icons/MySQL.png' },
     { name: 'SQLite', icon: 'SiSqlite', category: 'database', iconPath: '/programming-portfolio/images/icons/SQLite.png' },
     { name: 'JSON', icon: 'SiJson', category: 'database', iconPath: '/programming-portfolio/images/icons/JSON.png' },
   
@@ -194,5 +192,5 @@ export const bio = {
   name: 'Dan White',
   title: 'Full Stack Developer',
   description: bioContent,
-  avatarUrl: '/programming-portfolio/images/avatar/meCropped.png', // Corrected path
+  avatarUrl: '/programming-portfolio/images/avatar/ProfilePic.png', // Corrected path
 };
