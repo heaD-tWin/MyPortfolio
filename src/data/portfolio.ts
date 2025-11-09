@@ -87,6 +87,7 @@ export const technologies: Technology[] = [
     { name: 'JSON', icon: 'SiJson', category: 'database', iconPath: '/programming-portfolio/images/icons/JSON.png' },
   
   // Cloud & Infrastructure
+    { name: 'AWS', icon: 'SiAmazonaws', category: 'other', iconPath: '/programming-portfolio/images/icons/AWS.png' },
     { name: 'Google Cloud', icon: 'SiGooglecloud', category: 'other', iconPath: '/programming-portfolio/images/icons/GoogleCloud.png' },
     { name: 'Azure AD', icon: 'SiMicrosoftazure', category: 'other', iconPath: '/programming-portfolio/images/icons/AzureAD.png' },
     { name: 'VMware', icon: 'SiVmware', category: 'other', iconPath: '/programming-portfolio/images/icons/Vmware.png' },
@@ -174,6 +175,13 @@ export const courses: Course[] = [
         institution: 'Duke Duke University (Coursera)',
         completionDate: '2025',
         description: 'An in-depth program covering the essentials of Java programming and software engineering. The course focuses on core concepts such as problem-solving, object-oriented programming, algorithms, and data structures. Learners gain hands-on experience building robust applications and develop foundational skills in software development, testing, and project management.',
+    },
+    {
+        id: '5',
+        title: 'AWS Cloud Solutions Architect Professional Certificate',
+        institution: 'AWS (Coursera)',
+        completionDate: 'Current',
+        description: 'A comprehensive professional certificate program focused on designing and implementing scalable, secure, and cost-effective cloud solutions on Amazon Web Services. The curriculum covers advanced topics including cloud architecture best practices, designing highly available systems, implementing disaster recovery strategies, migrating applications to AWS, optimizing costs, and securing cloud infrastructure. Key areas include EC2, S3, RDS, Lambda, VPC networking, IAM, CloudFormation, and monitoring with CloudWatch. The program emphasizes hands-on experience with real-world scenarios and prepares learners for the AWS Certified Solutions Architect certification exam.',
     },
 ];
 
