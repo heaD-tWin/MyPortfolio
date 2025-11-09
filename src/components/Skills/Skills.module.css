@@ -66,6 +66,7 @@
   font-size: 1.5rem;
   margin-bottom: var(--spacing-xs);
   transition: all var(--transition-medium);
+  color: var(--color-black); /* Make all SVG icons white */
 }
 
 .techItem:hover .techIcon {
