@@ -93,10 +93,10 @@ export const technologies: Technology[] = [
     { name: 'VMware', icon: 'SiVmware', category: 'other', iconPath: '/programming-portfolio/images/icons/Vmware.png' },
   
   // Enterprise & Networking
-  { name: 'Cisco IOS', icon: 'SiCisco', category: 'other' },
+    { name: 'Cisco IOS', icon: 'SiCisco', category: 'other' },
   { name: 'RESTful API', icon: 'SiPostman', category: 'other' },
   { name: 'VOIP', icon: 'SiWebrtc', category: 'other' },
-  { name: 'Hyper-V', icon: 'SiMicrosoft', category: 'other' },
+    { name: 'Hyper-V', icon: 'SiMicrosoft', category: 'other', iconPath: '/programming-portfolio/images/icons/Microsoft.png' },
   
   // Add more technologies here
 ];
