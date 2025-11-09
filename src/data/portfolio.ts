@@ -20,11 +20,11 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/heaD-tWin/fret-studio',
     liveUrl: '',
     images: [
-      '/programming-portfolio/images/projects/FretStudioScreen01.png',
-      '/programming-portfolio/images/projects/FretStudioScreen02.png',
-      '/programming-portfolio/images/projects/FretStudioScreen03.png',
-      '/programming-portfolio/images/projects/FretStudioScreen04.png',
-      '/programming-portfolio/images/projects/FretStudioScreen05.png',
+      '/MyPortfolio/images/projects/FretStudioScreen01.png',
+      '/MyPortfolio/images/projects/FretStudioScreen02.png',
+      '/MyPortfolio/images/projects/FretStudioScreen03.png',
+      '/MyPortfolio/images/projects/FretStudioScreen04.png',
+      '/MyPortfolio/images/projects/FretStudioScreen05.png',
     ],
     featured: true,
     },
@@ -42,8 +42,8 @@ export const projects: Project[] = [
         githubUrl: 'https://github.com/heaD-tWin/WeatherView',
         liveUrl: '', // Remove since it's a desktop app
         images: [
-            '/programming-portfolio/images/projects/WVScreenshot1.png',
-            '/programming-portfolio/images/projects/WVScreenshot2.png',
+            '/MyPortfolio/images/projects/WVScreenshot1.png',
+            '/MyPortfolio/images/projects/WVScreenshot2.png',
         ],
         featured: true,
     },
@@ -53,50 +53,50 @@ export const projects: Project[] = [
 // TODO: Add your actual technologies
 export const technologies: Technology[] = [
   // Programming Languages
-  { name: 'JavaScript', icon: 'SiJavascript', category: 'language', iconPath: '/programming-portfolio/images/icons/JavaScript.png' },
-  { name: 'TypeScript', icon: 'SiTypescript', category: 'language', iconPath: '/programming-portfolio/images/icons/TypeScript.png' },
-    { name: 'HTML5', icon: 'SiHtml5', category: 'language', iconPath: '/programming-portfolio/images/icons/HTML5.png' },
-    { name: 'CSS3', icon: 'SiCss3', category: 'language', iconPath: '/programming-portfolio/images/icons/CSS3.png' },
-    { name: 'Python', icon: 'SiPython', category: 'language', iconPath: '/programming-portfolio/images/icons/Python.png' },
-    { name: 'Java', icon: 'SiJava', category: 'language', iconPath: '/programming-portfolio/images/icons/Java.png' },
+  { name: 'JavaScript', icon: 'SiJavascript', category: 'language', iconPath: '/MyPortfolio/images/icons/JavaScript.png' },
+  { name: 'TypeScript', icon: 'SiTypescript', category: 'language', iconPath: '/MyPortfolio/images/icons/TypeScript.png' },
+    { name: 'HTML5', icon: 'SiHtml5', category: 'language', iconPath: '/MyPortfolio/images/icons/HTML5.png' },
+    { name: 'CSS3', icon: 'SiCss3', category: 'language', iconPath: '/MyPortfolio/images/icons/CSS3.png' },
+    { name: 'Python', icon: 'SiPython', category: 'language', iconPath: '/MyPortfolio/images/icons/Python.png' },
+    { name: 'Java', icon: 'SiJava', category: 'language', iconPath: '/MyPortfolio/images/icons/Java.png' },
   
   // Frontend Frameworks & Libraries
-    { name: 'React', icon: 'SiReact', category: 'framework', iconPath: '/programming-portfolio/images/icons/React.png' },
-    { name: 'React Router', icon: 'SiReactrouter', category: 'framework', iconPath: '/programming-portfolio/images/icons/ReactRouter.png' },
-    { name: 'Vite', icon: 'SiVite', category: 'framework', iconPath: '/programming-portfolio/images/icons/Vite.png' },
+    { name: 'React', icon: 'SiReact', category: 'framework', iconPath: '/MyPortfolio/images/icons/React.png' },
+    { name: 'React Router', icon: 'SiReactrouter', category: 'framework', iconPath: '/MyPortfolio/images/icons/ReactRouter.png' },
+    { name: 'Vite', icon: 'SiVite', category: 'framework', iconPath: '/MyPortfolio/images/icons/Vite.png' },
   
   // Backend Frameworks
-    { name: 'FastAPI', icon: 'SiFastapi', category: 'framework', iconPath: '/programming-portfolio/images/icons/FastAPI.png' },
-    { name: 'Django', icon: 'SiDjango', category: 'framework', iconPath: '/programming-portfolio/images/icons/Django.png' },
-    { name: 'Node.js', icon: 'SiNodedotjs', category: 'framework', iconPath: '/programming-portfolio/images/icons/NodeJS.png' },
-    { name: 'Pydantic', icon: 'SiPydantic', category: 'framework', iconPath: '/programming-portfolio/images/icons/Pydantic.png' },
+    { name: 'FastAPI', icon: 'SiFastapi', category: 'framework', iconPath: '/MyPortfolio/images/icons/FastAPI.png' },
+    { name: 'Django', icon: 'SiDjango', category: 'framework', iconPath: '/MyPortfolio/images/icons/Django.png' },
+    { name: 'Node.js', icon: 'SiNodedotjs', category: 'framework', iconPath: '/MyPortfolio/images/icons/NodeJS.png' },
+    { name: 'Pydantic', icon: 'SiPydantic', category: 'framework', iconPath: '/MyPortfolio/images/icons/Pydantic.png' },
   
   // Tools & Version Control
-    { name: 'Git', icon: 'SiGit', category: 'tool', iconPath: '/programming-portfolio/images/icons/Git.png' },
-    { name: 'GitHub', icon: 'SiGithub', category: 'tool', iconPath: '/programming-portfolio/images/icons/GitHub.png' },
-    { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tool', iconPath: '/programming-portfolio/images/icons/BitBucket.png' },
-    { name: 'Uvicorn', icon: 'SiUvicorn', category: 'tool', iconPath: '/programming-portfolio/images/icons/Uvicorn.png' },
-    { name: 'Vitest', icon: 'SiVitest', category: 'tool', iconPath: '/programming-portfolio/images/icons/Vite.png' },
+    { name: 'Git', icon: 'SiGit', category: 'tool', iconPath: '/MyPortfolio/images/icons/Git.png' },
+    { name: 'GitHub', icon: 'SiGithub', category: 'tool', iconPath: '/MyPortfolio/images/icons/GitHub.png' },
+    { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tool', iconPath: '/MyPortfolio/images/icons/BitBucket.png' },
+    { name: 'Uvicorn', icon: 'SiUvicorn', category: 'tool', iconPath: '/MyPortfolio/images/icons/Uvicorn.png' },
+    { name: 'Vitest', icon: 'SiVitest', category: 'tool', iconPath: '/MyPortfolio/images/icons/Vite.png' },
   
   // Testing
-    { name: 'React Testing Library', icon: 'SiTestinglibrary', category: 'tool', iconPath: '/programming-portfolio/images/icons/ReactTestingLibrary.png' },
+    { name: 'React Testing Library', icon: 'SiTestinglibrary', category: 'tool', iconPath: '/MyPortfolio/images/icons/ReactTestingLibrary.png' },
   
   // Database
-    { name: 'MySQL', icon: 'SiMysql', category: 'database', iconPath: '/programming-portfolio/images/icons/MySQL.png' },
-    { name: 'SQLite', icon: 'SiSqlite', category: 'database', iconPath: '/programming-portfolio/images/icons/SQLite.png' },
-    { name: 'JSON', icon: 'SiJson', category: 'database', iconPath: '/programming-portfolio/images/icons/JSON.png' },
+    { name: 'MySQL', icon: 'SiMysql', category: 'database', iconPath: '/MyPortfolio/images/icons/MySQL.png' },
+    { name: 'SQLite', icon: 'SiSqlite', category: 'database', iconPath: '/MyPortfolio/images/icons/SQLite.png' },
+    { name: 'JSON', icon: 'SiJson', category: 'database', iconPath: '/MyPortfolio/images/icons/JSON.png' },
   
   // Cloud & Infrastructure
-    { name: 'AWS', icon: 'SiAmazonaws', category: 'other', iconPath: '/programming-portfolio/images/icons/AWS.png' },
-    { name: 'Google Cloud', icon: 'SiGooglecloud', category: 'other', iconPath: '/programming-portfolio/images/icons/GoogleCloud.png' },
-    { name: 'Azure AD', icon: 'SiMicrosoftazure', category: 'other', iconPath: '/programming-portfolio/images/icons/AzureAD.png' },
-    { name: 'VMware', icon: 'SiVmware', category: 'other', iconPath: '/programming-portfolio/images/icons/Vmware.png' },
+    { name: 'AWS', icon: 'SiAmazonaws', category: 'other', iconPath: '/MyPortfolio/images/icons/AWS.png' },
+    { name: 'Google Cloud', icon: 'SiGooglecloud', category: 'other', iconPath: '/MyPortfolio/images/icons/GoogleCloud.png' },
+    { name: 'Azure AD', icon: 'SiMicrosoftazure', category: 'other', iconPath: '/MyPortfolio/images/icons/AzureAD.png' },
+    { name: 'VMware', icon: 'SiVmware', category: 'other', iconPath: '/MyPortfolio/images/icons/Vmware.png' },
   
   // Enterprise & Networking
     { name: 'Cisco IOS', icon: 'SiCisco', category: 'other' },
   { name: 'RESTful API', icon: 'SiPostman', category: 'other' },
   { name: 'VOIP', icon: 'SiWebrtc', category: 'other' },
-    { name: 'Hyper-V', icon: 'SiMicrosoft', category: 'other', iconPath: '/programming-portfolio/images/icons/Microsoft.png' },
+    { name: 'Hyper-V', icon: 'SiMicrosoft', category: 'other', iconPath: '/MyPortfolio/images/icons/Microsoft.png' },
   
   // Add more technologies here
 ];
@@ -200,5 +200,5 @@ export const bio = {
   name: 'Dan White',
   title: 'Full Stack Developer',
   description: bioContent,
-  avatarUrl: '/programming-portfolio/images/avatar/ProfilePic.png', // Corrected path
+  avatarUrl: '/MyPortfolio/images/avatar/ProfilePic.png',
 };
