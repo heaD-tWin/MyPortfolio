@@ -134,6 +134,35 @@
   border-color: var(--color-vivid-orange);
 }
 
+.formGroup input:disabled,
+.formGroup textarea:disabled {
+  background-color: var(--color-gray-light);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid #c3e6cb;
+  font-weight: 500;
+  text-align: center;
+}
+
+.errorMessage {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid #f5c6cb;
+  font-weight: 500;
+  text-align: center;
+}
+
 .contactForm .button {
   display: flex;
   align-items: center;
