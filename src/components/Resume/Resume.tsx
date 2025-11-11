@@ -4,7 +4,7 @@ import MagneticButton from '../Interactive/MagneticButton';
 import styles from './Resume.module.css';
 
 const Resume: React.FC = () => {
-  const resumeUrl = '/programming-portfolio/resume/DanielWhiteResume.pdf';
+  const resumeUrl = '/MyPortfolio/resume/DanielWhiteResume.pdf';
 
   const handleDownload = () => {
     const link = document.createElement('a');
