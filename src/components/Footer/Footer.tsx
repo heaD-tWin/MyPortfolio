@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             Made with <FaHeart className={styles.heart} /> using React & TypeScript.
           </p>
           <p className={styles.footerNote}>
-            © {currentYear} Dan White. Built with modern web technologies and deployed on GitHub Pages.
+            &copy; {currentYear} Dan White. Built with modern web technologies and deployed on GitHub Pages.
           </p>
         </div>
       </div>
